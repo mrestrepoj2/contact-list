@@ -1,10 +1,30 @@
-const contactos=["María Alejandra", "Daniel Restrepo", "Belén López"];
+const contacto = [{
+    id: "",
+    nombres: "",
+    apellidos: "",
+    telefono: "",
+    ubicaciones: {
+        ciudad: "",
+        direccion: ""
+    }
+}]
 
-function agregarContacto($){
-    contactos.push($);
+const contactos = [contacto];
+
+function nuevoContacto(contacto){
+    contactos.push(contacto);
 }
 
-agregarContacto("Daniel");
+nuevoContacto({
+    id: "1000",
+    nombres: "Sandra",
+    apellidos: "Milena",
+    telefono: "3206557819",
+    ubicaciones: {
+        ciudad: "Curumaní",
+        direccion: "Calle 10"
+    }
+});
 
 function borrarContacto(){
     contactos.pop();
@@ -13,9 +33,3 @@ function borrarContacto(){
 borrarContacto();
 
 console.log(contactos);
-
-for (let i = 0; i < contactos.length; i++) {
-    const element = contactos[i];
-    console.log(element);
-    
-}
